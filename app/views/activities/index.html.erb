@@ -1,0 +1,13 @@
+<h2>Activities</h2>
+
+<ul>
+ <% @activities.each do |a| %>
+   <li>
+     <%= a.activity_name %>
+     <%= form_tag 'questions', method: "post" do %>
+     <%= submit_tag "#{a.activity_name}" %>
+     <% end %>
+   </li>
+   <br>
+ <% end %>
+</ul>
