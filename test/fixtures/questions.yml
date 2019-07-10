@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyText
+  resource_id: 1
+  answer: MyString
+  opt1: MyString
+  opt2: MyString
+  opt3: MyString
+
+two:
+  content: MyText
+  resource_id: 1
+  answer: MyString
+  opt1: MyString
+  opt2: MyString
+  opt3: MyString

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  planet_name: MyString
+  planet_stage: 1
+  user_id: 1
+  activity_id: 1
+
+two:
+  planet_name: MyString
+  planet_stage: 1
+  user_id: 1
+  activity_id: 1
