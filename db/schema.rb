@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_10_105619) do
+ActiveRecord::Schema.define(version: 2019_07_10_140449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,6 @@ ActiveRecord::Schema.define(version: 2019_07_10_105619) do
     t.integer "primary_stage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "question_id"
-    t.bigint "planet_id"
-    t.index ["planet_id"], name: "index_activities_on_planet_id"
-    t.index ["question_id"], name: "index_activities_on_question_id"
   end
 
   create_table "planets", force: :cascade do |t|
@@ -47,6 +43,8 @@ ActiveRecord::Schema.define(version: 2019_07_10_105619) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "resource_id"
+    t.bigint "activity_id"
+    t.index ["activity_id"], name: "index_questions_on_activity_id"
     t.index ["resource_id"], name: "index_questions_on_resource_id"
   end
 
@@ -67,9 +65,8 @@ ActiveRecord::Schema.define(version: 2019_07_10_105619) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "activities", "planets"
-  add_foreign_key "activities", "questions"
   add_foreign_key "planets", "users"
+  add_foreign_key "questions", "activities"
   add_foreign_key "questions", "resources"
   add_foreign_key "resources", "planets"
 end
