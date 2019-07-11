@@ -1,0 +1,17 @@
+<%= form_for @chosen_question, :url => { :action => :recieve_answer } do |f|%>
+<%= @chosen_question.content %>
+<%= hidden_field_tag 'solution', "#{@chosen_question.answer}"%>
+<div class='choice_a'>
+<%= f.submit "#{@chosen_question.choice_a}"%>
+</div>
+<div class='choice_b'>
+<%= f.submit "#{@chosen_question.choice_b}"%>
+</div>
+<div class='choice_c'>
+<%= f.submit "#{@chosen_question.choice_c}"%>
+</div>
+<div class='choice_d'>
+<%= f.submit "#{@chosen_question.choice_d}"%>
+</div>
+
+<% end %>
