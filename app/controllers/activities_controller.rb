@@ -11,10 +11,7 @@ class ActivitiesController < ApplicationController
     
   end
 
-  def recieve_answer
-    byebug
-    user_answer = params[:desision]
-  end
+  
 
   
 end
