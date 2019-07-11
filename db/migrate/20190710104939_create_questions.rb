@@ -1,12 +1,12 @@
 class CreateQuestions < ActiveRecord::Migration[5.2]
   def change
     create_table :questions do |t|
-      t.text :content
-      t.integer :resource_id
+      t.string :content
       t.string :answer
-      t.string :opt1
-      t.string :opt2
-      t.string :opt3
+      t.string :choice_a
+      t.string :choice_b
+      t.string :choice_c
+      t.string :choice_d
 
       t.timestamps
     end

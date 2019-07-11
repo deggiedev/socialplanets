@@ -1,4 +1,5 @@
 class Resource < ApplicationRecord
-    belongs_to :question
+  belongs_to :planet
+  has_many :questions
+  
 end
-

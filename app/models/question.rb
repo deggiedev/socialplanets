@@ -1,4 +1,5 @@
 class Question < ApplicationRecord
-    has_many :planets, through, :activity
-    belongs_to :activity
+  belongs_to :activity
+  has_many :resources
 end
+

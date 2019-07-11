@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< HEAD
   content: MyText
   resource_id: 1
   answer: MyString
@@ -15,3 +16,19 @@ two:
   opt1: MyString
   opt2: MyString
   opt3: MyString
+=======
+  content: MyString
+  answer: MyString
+  choice_a: MyString
+  choice_b: MyString
+  choice_c: MyString
+  choice_d: MyString
+
+two:
+  content: MyString
+  answer: MyString
+  choice_a: MyString
+  choice_b: MyString
+  choice_c: MyString
+  choice_d: MyString
+>>>>>>> c451b7a6b972c1b0ab74af8735fb4995e266870b

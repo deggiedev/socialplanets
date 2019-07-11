@@ -1,0 +1,9 @@
+<%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <%= f.label :password_digest %>
+    <%= f.text_field :password_digest %>
+    <%= f.label :native_species %>
+    <%= f.text_field :native_species %>
+    <%= f.submit 'Sign Up' %>
+<% end %>
