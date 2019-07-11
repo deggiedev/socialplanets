@@ -16,8 +16,11 @@ class QuestionsController < ApplicationController
     @question = Question.find_by_answer(params[:solution])
     @activity = @question.activity
     
-    byebug
+    
    if params[:solution] == params[:commit]
+    @success_reward = PlanetMaterial.find_or_create_by(planet_id: @planet.id, material_id: @question.material_id)
+    @success_reward.total_units += @activity.base_reward
+    @success_reward.save
     
     redirect_to '/success' 
    else

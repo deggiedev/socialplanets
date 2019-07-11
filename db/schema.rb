@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_11_121639) do
+ActiveRecord::Schema.define(version: 2019_07_11_132558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,16 +25,18 @@ ActiveRecord::Schema.define(version: 2019_07_11_121639) do
 
   create_table "materials", force: :cascade do |t|
     t.string "material_type"
-    t.integer "material_total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "planet_materials", force: :cascade do |t|
+    t.integer "total_units"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "planet_id"
-    t.index ["planet_id"], name: "index_materials_on_planet_id"
-  end
-
-  create_table "materials_planets", id: false, force: :cascade do |t|
-    t.bigint "planet_id", null: false
-    t.bigint "material_id", null: false
+    t.bigint "material_id"
+    t.index ["material_id"], name: "index_planet_materials_on_material_id"
+    t.index ["planet_id"], name: "index_planet_materials_on_planet_id"
   end
 
   create_table "planets", force: :cascade do |t|
@@ -55,9 +57,9 @@ ActiveRecord::Schema.define(version: 2019_07_11_121639) do
     t.string "choice_d"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "material_id"
     t.bigint "activity_id"
     t.string "answer"
+    t.bigint "material_id"
     t.index ["activity_id"], name: "index_questions_on_activity_id"
     t.index ["material_id"], name: "index_questions_on_material_id"
   end
@@ -70,7 +72,8 @@ ActiveRecord::Schema.define(version: 2019_07_11_121639) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "materials", "planets"
+  add_foreign_key "planet_materials", "materials"
+  add_foreign_key "planet_materials", "planets"
   add_foreign_key "planets", "users"
   add_foreign_key "questions", "activities"
   add_foreign_key "questions", "materials"
