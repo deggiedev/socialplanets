@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+<<<<<<< HEAD
+  name: MyString
+
+two:
+  name: MyString
+=======
+  resource_name: MyString
+  resource_total: 1
+
+two:
+  resource_name: MyString
+  resource_total: 1
+>>>>>>> c451b7a6b972c1b0ab74af8735fb4995e266870b

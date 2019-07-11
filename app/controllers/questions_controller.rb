@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
- 
+
   def index
    
   end
@@ -7,6 +7,7 @@ class QuestionsController < ApplicationController
   def show
     @questions = Question.all.select {|q| q.activity.activity_name == params[:commit] }
     @chosen_question = @questions.sample
+
     
   end
 

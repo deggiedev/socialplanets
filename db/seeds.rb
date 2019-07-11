@@ -17,9 +17,9 @@ materials_seed = Material.create([{ material_type: 'water'}, { material_type: 'i
 
 planet_materials_seed = PlanetMaterial.create([{ total_units: 200, planet_id: 1, material_id: 2}, {total_units: 475, planet_id: 2, material_id: 1}])
 
-
 activities_seed = Activity.create([{ activity_name: 'Maths question', base_reward: 100, primary_stage: 1 }, { activity_name: 'Random question', base_reward: 150, primary_stage: 1}])
 
 questions_seed = Question.create([{ content: 'What is 30 divided by 15?', answer: '2', choice_a: '5', choice_b: '20', choice_c: '2', choice_d: '12', material_id: 1, activity_id: 1 }, { content: 'What kind of vision does a dog have?', answer: 'Black and White', choice_a: 'Same as humans', choice_b: 'Black and White', choice_c: 'Ultraviolet', choice_d: 'Sepia', material_id: 2, activity_id: 2 }])
 
 puts 'Seeded Successfully'
+

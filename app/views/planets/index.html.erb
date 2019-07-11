@@ -1,0 +1,16 @@
+<h2>Planets In Orbit</h2>
+
+<ul>
+  <% @planets.each do |planet| %>
+    <li>
+      <%= button_to(planet.planet_name, planet, :method => "get" ) %>
+        <ul><br>
+            <li><%= "High Score: #{planet.high_score}" %></li>
+            <li><%= "Stage: #{planet.stage}" %></li>
+        </ul>
+    </li>
+    <br>
+  <% end %>
+</ul>
+
+<%= button_to('build your planet', new_planet_path, :method => "get", class: "btn") %>

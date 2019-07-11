@@ -1,11 +1,3 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  activity_name: MyString
-  base_reward: 1
-  primary_stage: 1
 
-two:
-  activity_name: MyString
-  base_reward: 1
-  primary_stage: 1

@@ -10,5 +10,6 @@ class ActivitiesController < ApplicationController
     @questions = Question.all.select {|q| q.id == @activity.id }
     
   end
+
   
 end

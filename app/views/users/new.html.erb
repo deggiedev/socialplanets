@@ -1,0 +1,9 @@
+<%= form_for @user,:html=>{:class=> "form1"} do |f| %>
+    <%= f.label :username %><br><br>
+    <%= f.text_field :username %><br><br>
+    <%= f.label :password_digest %><br><br>
+    <%= f.text_field :password_digest %><br><br>
+    <%= f.label :native_species %><br><br>
+    <%= f.text_field :native_species %><br><br>
+    <%= f.submit 'Sign Up' %><br><br>
+<% end %>
