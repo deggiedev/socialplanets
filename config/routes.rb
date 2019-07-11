@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :planet_materials
+  resources :materials
   resources :questions, only: [:index, :show]
   resources :materials, only: [:index]
   resources :activities

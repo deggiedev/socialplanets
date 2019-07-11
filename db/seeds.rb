@@ -13,7 +13,9 @@ User.create(username: 'Killa', password_digest: 'fuckoff', native_species: 'Utop
 
 planets_seed = Planet.create([{ planet_name: 'Tartarus', stage: 1, high_score: 500, user_id: 1 }, { planet_name: 'Volkihar', stage: 1, high_score: 750, user_id: 2 }])
 
-materials_seed = Material.create([{ material_type: 'water', material_total: 240, planet_id: 1 }, { material_type: 'iron', material_total: 80, planet_id: 2 }])
+materials_seed = Material.create([{ material_type: 'water'}, { material_type: 'iron'}])
+
+planet_materials_seed = PlanetMaterial.create([{ total_units: 200, planet_id: 1, material_id: 2}, {total_units: 475, planet_id: 2, material_id: 1}])
 
 
 activities_seed = Activity.create([{ activity_name: 'Maths question', base_reward: 100, primary_stage: 1 }, { activity_name: 'Random question', base_reward: 150, primary_stage: 1}])

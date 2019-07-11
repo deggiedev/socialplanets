@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  material_type: MyString
+  total_units: 1
 
 two:
-  material_type: MyString
+  total_units: 1
