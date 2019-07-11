@@ -1,0 +1,2 @@
+class PlanetMaterialsController < ApplicationController
+end
