@@ -1,4 +1,5 @@
 class PlanetsController < ApplicationController
+
     
     def index 
         @planets = Planet.all
@@ -22,5 +23,6 @@ class PlanetsController < ApplicationController
     def planet_params
         params.require(:planet).permit(:planet_name, :stage, :high_score, :user_id)
       end
+
 
 end
