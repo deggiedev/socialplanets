@@ -1,14 +1,2 @@
 
-<% @questions.each do |q| %>
-<p><%= q.content %></p>
-<p><%= q.choice_a %></p>
-<p><%= q.choice_b %></p>
-<p><%= q.choice_c %></p>
-<p><%= q.choice_d %></p>
-<p>What is your answer?</p>
-<%= form_tag 'show', method: "post" do %>
-<%= text_field_tag :decision %>
-<%= submit_tag "Submit Answer" %>
 
-<% end %>
-<% end %>
