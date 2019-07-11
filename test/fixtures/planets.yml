@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  planet_name: MyString
+  stage: MyString
+  high_score: 1
+
+two:
+  planet_name: MyString
+  stage: MyString
+  high_score: 1
