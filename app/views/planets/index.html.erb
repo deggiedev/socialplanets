@@ -3,8 +3,8 @@
 <ul>
   <% @planets.each do |planet| %>
     <li>
-      <%= link_to(planet.planet_name, planet) %>
-        <ul>
+      <%= button_to(planet.planet_name, planet, :method => "get" ) %>
+        <ul><br>
             <li><%= "High Score: #{planet.high_score}" %></li>
             <li><%= "Stage: #{planet.stage}" %></li>
         </ul>
@@ -13,4 +13,4 @@
   <% end %>
 </ul>
 
-<%= link_to('build your planet', new_planet_path) %>
+<%= button_to('build your planet', new_planet_path, :method => "get", class: "btn") %>
