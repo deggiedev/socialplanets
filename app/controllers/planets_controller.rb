@@ -9,7 +9,7 @@ class PlanetsController < ApplicationController
     end
 
     def new 
-        @planet = Planet.new(:high_score => 0) 
+        @planet = Planet.new(:stage => 1, :high_score => 0) 
     end
 
     def create 

@@ -3,8 +3,8 @@
 <ul>
   <% @users.each do |user| %>
     <li>
-      <%= link_to(user.username, user) %>
-        <ul>
+      <%= button_to(user.username, user, :method => "get") %>
+        <ul><br>
             <li><%= "Native Species: #{user.native_species}" %></li>
         </ul>
     </li>
@@ -12,4 +12,4 @@
   <% end %>
 </ul>
 
-<%= link_to('sign up', new_user_path) %>
+<%= button_to('sign up', new_user_path, :method => "get", class: "btn") %>
