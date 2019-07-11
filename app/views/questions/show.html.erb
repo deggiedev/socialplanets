@@ -1,0 +1,12 @@
+
+<p><%= @chosen_question.content %></p>
+<p><%= @chosen_question.choice_a %></p>
+<p><%= @chosen_question.choice_b %></p>
+<p><%= @chosen_question.choice_c %></p>
+<p><%= @chosen_question.choice_d %></p>
+<p>What is your answer?</p>
+<%= form_tag 'show', method: "post" do %>
+<%= text_field_tag :decision %>
+<%= submit_tag "Submit Answer" %>
+
+<% end %>

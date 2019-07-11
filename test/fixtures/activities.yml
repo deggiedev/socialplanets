@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< HEAD
   name: MyString
   reward: 1
   stage: 1
@@ -13,3 +14,13 @@ two:
   stage: 1
   planet_id: 1
   question_id: 1
+=======
+  activity_name: MyString
+  reward: 1
+  primary_stage: 1
+
+two:
+  activity_name: MyString
+  reward: 1
+  primary_stage: 1
+>>>>>>> c451b7a6b972c1b0ab74af8735fb4995e266870b

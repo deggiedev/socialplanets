@@ -2,6 +2,7 @@
 
 one:
   planet_name: MyString
+<<<<<<< HEAD
   planet_stage: 1
   user_id: 1
   activity_id: 1
@@ -11,3 +12,12 @@ two:
   planet_stage: 1
   user_id: 1
   activity_id: 1
+=======
+  stage: MyString
+  high_score: 1
+
+two:
+  planet_name: MyString
+  stage: MyString
+  high_score: 1
+>>>>>>> c451b7a6b972c1b0ab74af8735fb4995e266870b

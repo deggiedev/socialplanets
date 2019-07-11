@@ -1,0 +1,11 @@
+<%= form_for @planet do |f| %>
+    <%= f.label :planet_name %>
+    <%= f.text_field :planet_name %>
+    <%= f.label :stage %>
+    <%= f.text_field :stage %>
+    <%= f.label :high_score %>
+    <%= f.text_field :high_score %>
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id%>
+    <%= f.submit 'Create Planet' %>
+<% end %>
